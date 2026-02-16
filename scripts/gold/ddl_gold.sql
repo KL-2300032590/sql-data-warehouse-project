@@ -83,3 +83,6 @@ LEFT JOIN gold.dim_products pr
 LEFT JOIN gold.dim_customers cu
     ON sd.sls_cust_id = cu.customer_id;
 GO
+
+
+
