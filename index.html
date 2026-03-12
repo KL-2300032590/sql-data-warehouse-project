@@ -5,64 +5,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SQL Data Warehouse Project</title>
+<title>SQL Data Warehouse</title>
 
 <style>
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background:#f6f8fa;
     margin:0;
-    padding:0;
+    padding:40px;
 }
 
 .container{
     max-width:1000px;
     margin:auto;
-    padding:40px;
 }
 
 h1{
-    font-size:36px;
-    margin-bottom:10px;
+    font-size:40px;
 }
 
 h2{
     margin-top:40px;
 }
 
-p{
-    font-size:16px;
-    line-height:1.6;
-}
-
 img{
     width:100%;
     max-width:900px;
+    margin-top:15px;
     border-radius:8px;
-    margin-top:15px;
 }
 
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    margin-top:25px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-}
-
-a.button{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 18px;
-    background:#24292e;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-a.button:hover{
-    background:#000;
+a{
+    color:#5a2ca0;
+    font-weight:bold;
 }
 
 </style>
@@ -73,101 +49,34 @@ a.button:hover{
 
 <div class="container">
 
-<h1>SQL Data Warehouse Project</h1>
+<h1>SQL Data Warehouse (Medallion Architecture)</h1>
 
 <p>
-This project demonstrates the design and implementation of a modern
-<strong>SQL-based Data Warehouse</strong> using the
-<strong>Medallion Architecture</strong> approach.
+This project demonstrates a Medallion Data Warehouse architecture.
 </p>
 
-<p>
-The pipeline ingests raw data, transforms it into structured datasets,
-and prepares optimized tables for analytical workloads and reporting.
-</p>
+<h2>Architecture</h2>
 
-<a class="button" href="https://github.com/KL-2300032590/sql-data-warehouse-project" target="_blank">
-View Source Code on GitHub
-</a>
+<p>Bronze → Raw data ingestion</p>
+<p>Silver → Cleaned and validated data</p>
+<p>Gold → Aggregated analytics tables</p>
 
-
-<div class="card">
-
-<h2>Architecture Overview</h2>
-
-<p>
-The system follows a Medallion architecture consisting of
-<strong>Bronze, Silver, and Gold layers</strong>.
-Each layer progressively improves data quality and query performance.
-</p>
-
-<img src="docs/data_flow.png" alt="Data Flow Architecture">
-
-</div>
-
-
-<div class="card">
+<!-- ARCHITECTURE IMAGE -->
+<img src="docs/data_flow.png" alt="Data Warehouse Architecture">
 
 <h2>Bronze Layer</h2>
 
-<p>
-The Bronze layer stores raw ingested data exactly as received from source systems.
-This layer acts as the immutable historical record of incoming datasets.
-</p>
-
 <img src="docs/bronze.png" alt="Bronze Layer">
-
-</div>
-
-
-<div class="card">
 
 <h2>Silver Layer</h2>
 
-<p>
-The Silver layer applies cleaning, normalization, and transformation logic
-to prepare reliable structured datasets suitable for analytics.
-</p>
-
 <img src="docs/silver.png" alt="Silver Layer">
 
-</div>
+<br><br>
 
-
-<div class="card">
-
-<h2>Key Features</h2>
-
-<ul>
-<li>SQL-based ETL pipelines</li>
-<li>Medallion architecture (Bronze / Silver / Gold)</li>
-<li>Dimensional modeling for analytics</li>
-<li>Optimized queries for reporting workloads</li>
-<li>Clear data lineage across transformation stages</li>
-</ul>
-
-</div>
-
-
-<div class="card">
-
-<h2>Repository Structure</h2>
-
-<pre>
-sql-data-warehouse-project
-│
-├── docs
-│   ├── bronze.png
-│   ├── silver.png
-│   └── data_flow.png
-│
-├── sql
-│
-└── README.md
-</pre>
-
-</div>
-
+<a href="https://github.com/KL-2300032590/sql-data-warehouse-project">
+View Source Code
+</a>
 
 </div>
 
